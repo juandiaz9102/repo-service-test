@@ -63,12 +63,11 @@ jobs:
           password: ${{ secrets.PASSWORD_DOCKER }}
 
       - name: Build and push Docker images
+
+
         uses: docker/build-push-action@v3
-        with:
-          push: true
-          secrets: |
-            GIT_AUTH_TOKEN=${{ secrets.TOKEN }}
-          
+        run: docker run -d --name nginx nginx:alpine
+        
 
 
   
