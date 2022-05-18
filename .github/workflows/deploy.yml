@@ -27,8 +27,7 @@ jobs:
           java-version: 11
           distribution: 'adopt'
       - name: Test
-        #run: mvn --batch-mode test
-        run: mvn --batch-mode --update-snapshots package
+        run: mvn --batch-mode test
 
   deploy:
     runs-on: ubuntu-latest
@@ -43,7 +42,8 @@ jobs:
         env:
           USSER_GHITHUB: ${{ secrets.USSER_GHITHUB }}
           PASSWORD_GITHUB: ${{ secrets.PASSWORD_GITHUB }}
-        run: mvn --settings settings.xml --file pom.xml deploy
+        #run: mvn --settings settings.xml --file pom.xml deploy
+        run: mvn --batch-mode --update-snapshots package
 
   Docker:
     runs-on: ubuntu-latest
