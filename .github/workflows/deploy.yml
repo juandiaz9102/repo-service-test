@@ -62,14 +62,13 @@ jobs:
           username: ${{ secrets.USER_DOCKER }}
           password: ${{ secrets.PASSWORD_DOCKER }}
 
-      
-
       - name: Build and push Docker images
-        uses: docker/build-push-action@v1
+        uses: docker/build-push-action@v3
         with:
-          context: .
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: user/app:latest
+          secrets: |
+            GIT_AUTH_TOKEN=${{ secrets.TOKEN }}
           
 
 
