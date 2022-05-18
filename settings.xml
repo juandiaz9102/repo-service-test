@@ -13,7 +13,7 @@
                 <repository>
                     <id>github</id>
                     <name>GitHub TobseF Apache Maven Packages</name>
-                    <url>https://maven.pkg.github.com/juandiaz9102/repo-services</url>
+                    <url>https://maven.pkg.github.com/juandiaz9102/repo-service-test</url>
                 </repository>
             </repositories>
         </profile>
@@ -22,7 +22,7 @@
     <servers>
         <server>
             <id>github</id>
-            <username>${env.USSER_HITHUB}</username>
+            <username>${env.USSER_GHITHUB}</username>
             <password>${env.PASSWORD_GITHUB}</password>
         </server>
     </servers>
