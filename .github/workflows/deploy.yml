@@ -62,8 +62,9 @@ jobs:
           password: ${{ secrets.PASSWORD_DOCKER }}
       -
         name: Build and push
-        uses: docker/push-action@v3
+        uses: docker/build-push-action@v3
         with:
+          context: ./Dockerfile
           push: true
           tags: juandiaz9102/app:latest
 
