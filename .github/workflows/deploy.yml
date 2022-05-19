@@ -62,6 +62,10 @@ jobs:
           username: ${{ secrets.USER_DOCKER }}
           password: ${{ secrets.PASSWORD_DOCKER }}
 
-      - name: Build and push Docker images
-        run: docker build -t go .
+      - name: Build and push
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          push: true
+          tags: juandiaz9102/go:tes1
       
