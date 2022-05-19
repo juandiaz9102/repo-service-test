@@ -52,10 +52,13 @@ jobs:
           username: ${{ secrets.USER_DOCKER }}
           password: ${{ secrets.PASSWORD_DOCKER }}
 
+      #- name: Build and push
+        #uses: docker/build-push-action@v3
+        #with:
+          #context: .
+          #push: true
+          #tags: juandiaz9102/go:tes1
       - name: Build and push
-        uses: docker/build-push-action@v3
-        with:
-          context: .
-          push: true
-          tags: juandiaz9102/go:tes1
+        run: docker build -t juandiaz9102/go:test1 .
+      - run: docker push imagen-nginx/go:tes1
       
