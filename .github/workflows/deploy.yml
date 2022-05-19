@@ -65,9 +65,7 @@ jobs:
         run: docker build -t "go:tes1" .
 
       - name: push
-        with:
-          context: .
-          push: true
+        
         run: docker tag Dockerfile juandiaz9102/image-nginx:test1
 
 
