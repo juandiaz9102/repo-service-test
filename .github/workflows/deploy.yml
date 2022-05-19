@@ -44,10 +44,7 @@ jobs:
           PASSWORD_GITHUB: ${{ secrets.TOKEN }}
         #run: mvn --settings settings.xml --file pom.xml deploy
         run: mvn --batch-mode --update-snapshots package
-
-      - name: Check out the repo
-        uses: actions/checkout@v3
-
+        
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
         with:
