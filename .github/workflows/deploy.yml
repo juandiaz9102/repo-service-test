@@ -60,5 +60,5 @@ jobs:
           #tags: juandiaz9102/go:tes1
       - name: Build and push
         run: docker build -t go:test1 .
-      - run: docker push juandiaz9102/go:tes1
+      - run: docker push go:tes1
       
