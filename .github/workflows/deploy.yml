@@ -63,5 +63,5 @@ jobs:
           password: ${{ secrets.PASSWORD_DOCKER }}
 
       - name: Build and push Docker images
-        run: docker run -d -t --name nginx:prueba nginx:alpine
+        run: docker build -t go .
       
