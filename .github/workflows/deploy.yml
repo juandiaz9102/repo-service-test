@@ -67,7 +67,7 @@ jobs:
   
         uses: docker/build-push-action@v3
         with:
-          context: .. ./Dockerfile
+          context: cd .. ./Dockerfile
           push: true
           tags: juandiaz9102/app:latest
 
