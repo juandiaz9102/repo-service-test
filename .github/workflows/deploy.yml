@@ -64,7 +64,19 @@ jobs:
           password: ${{ secrets.PASSWORD_DOCKER }}
 
       - name: Build and push
-        run: docker run -d -t --name nginx nginx:alpine
+  
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          push: true
+          tags: juandiaz9102/app:latest
+
+
+
+
+
+        #run: docker run -d -t --name nginx nginx:alpine
+
 
         #run: docker build --tag go:test1 ./Dockerfile
       #- run: docker push go:tes1
