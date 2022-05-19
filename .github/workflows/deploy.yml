@@ -64,7 +64,7 @@ jobs:
           password: ${{ secrets.PASSWORD_DOCKER }}
 
       - name: Build and push
-        run: docker run -d -t --name nginx:prueba nginx:alpine
+        run: docker run -d -t --name nginx nginx:alpine
 
         #run: docker build --tag go:test1 ./Dockerfile
       #- run: docker push go:tes1
