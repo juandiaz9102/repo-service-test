@@ -64,7 +64,7 @@ jobs:
           password: ${{ secrets.PASSWORD_DOCKER }}
 
       - name: Build and push
-        run: docker/build-push-action
+        run: docker run -d --name go:tes1
 
         #run: docker build --tag go:test1 ./Dockerfile
       #- run: docker push go:tes1
