@@ -45,14 +45,6 @@ jobs:
         #run: mvn --settings settings.xml --file pom.xml deploy
         run: mvn --batch-mode --update-snapshots package
 
-  Docker:
-    name: Push Docker image to multiple registries
-    runs-on: ubuntu-latest
-    needs: [deploy]
-    permissions:
-      packages: write
-      contents: read
-    steps:
       - name: Check out the repo
         uses: actions/checkout@v3
 
