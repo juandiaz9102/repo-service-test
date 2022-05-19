@@ -35,7 +35,7 @@ jobs:
         env:
           GITHUB_USERNAME: ${{ secrets.USER_GIT }}
           GITHUB_TOKEN: ${{ secrets.TOKEN }}        
-        run: mvn source:jar deploy -DuniqueVersion=false -Dmaven.source.useDefaultManifestFile=true -Dmaven.source.includePom=true -DaltDeploymentRepository='github::default::https://maven.pkg.github.com/Roggerbogota13/mavenprueba'
+        run: mvn source:jar deploy -DuniqueVersion=false -Dmaven.source.useDefaultManifestFile=true -Dmaven.source.includePom=true -DaltDeploymentRepository='github::default::https://maven.pkg.github.com/juandiaz9102/image-nginex'
         
   Docker:
     name: push Docker image
