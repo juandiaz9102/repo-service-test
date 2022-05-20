@@ -58,11 +58,18 @@ jobs:
           password: ${{ secrets.PASSWORD_DOCKER }}
 
       - name: Build and push
-        uses: docker/build-push-action@v2
-        with:
-          context: .
-          push: true
-          tags: juandiaz9102/app:latest
+
+        run: docker build -t juandiaz9102/image-nginx:tag .
+
+      - run: docker push juandiaz9102/image-nginx:tag
+
+
+
+        #uses: docker/build-push-action@v2
+        #with:
+          #context: .
+          #push: true
+          #tags: juandiaz9102/app:latest
 
 
 
