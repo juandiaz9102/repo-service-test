@@ -34,7 +34,7 @@ jobs:
   Docker:
     name: push Docker image
     runs-on: ubuntu-latest
-    needs: [deploy]
+    needs: [test]
     permissions:
       packages: write
       contents: read
