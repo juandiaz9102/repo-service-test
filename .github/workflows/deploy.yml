@@ -88,11 +88,13 @@ jobs:
       packages: write
       contents: read
     steps:
-    - uses: azure/login@v1
-      
+      - uses: azure/login@v1
+        with:
+          USER_AZURE: ${{ secrets.USER_AZURE }}
+          PASSWORD_AZURE: ${{ secrets.PASSWORD_AZURE }}
       # login azure
 
-      run: az login -u ${{ secrets.USER_AZURE }} -p ${{ secrets.PASSWORD_AZURE }}    
+      - run: az login -u ${{ secrets.USER_AZURE }} -p ${{ secrets.PASSWORD_AZURE }}    
 
 
 
