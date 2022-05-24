@@ -7,9 +7,9 @@ on:
 
 #********************************************
 
-env:
-  USER_AZURE: jmartinezgi01@unal.edu.co
-  PASSWORD_AZURE: Azure1234
+#env:
+  #USER_AZURE: jmartinezgi01@unal.edu.co
+  #PASSWORD_AZURE: Azure1234
 
 
 #********************************************
@@ -82,7 +82,7 @@ jobs:
 
       # login azure
 
-      - run: az login -u ${{ env.USER_AZURE }} -p ${{ env.PASSWORD_AZURE }}
+      - run: az login -u ${{ secrets.USER_AZURE }} -p ${{ secrets.PASSWORD_AZURE }}
 
       # bajar la imagen de docker hub
       
