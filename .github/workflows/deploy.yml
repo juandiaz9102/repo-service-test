@@ -82,7 +82,7 @@ jobs:
 
       # login azure
 
-      - run: az login -u ${{ secrets.USER_AZURE }} -p ${{ secrets.PASSWORD_AZURE }}
+      - run: az login -u ${{ env.USER_AZURE }} -p ${{ env.PASSWORD_AZURE }}
 
       # bajar la imagen de docker hub
       
