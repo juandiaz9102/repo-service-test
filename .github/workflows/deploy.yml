@@ -80,13 +80,23 @@ jobs:
       - run: docker push juandiaz9102/image-nginx:tag
 
 
+
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: azure/login@v1
+      
       # login azure
 
-      - run: az login -u ${{ secrets.USER_AZURE }} -p ${{ secrets.PASSWORD_AZURE }}
+      run: az login -u ${{ secrets.USER_AZURE }} -p ${{ secrets.PASSWORD_AZURE }}    
+
+
+
+      
 
       # bajar la imagen de docker hub
       
-      - run: docker pull nginx
+      #- run: docker pull nginx
 
       #entrar al cluster
 
