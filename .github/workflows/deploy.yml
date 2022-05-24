@@ -95,9 +95,6 @@ jobs:
       - run: az login -u ${{ secrets.USER_AZURE }} -p ${{ secrets.PASSWORD_AZURE }}    
 
 
-
-      
-
       # bajar la imagen de docker hub
       
       #- run: docker pull nginx
